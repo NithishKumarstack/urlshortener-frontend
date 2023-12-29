@@ -14,7 +14,7 @@ function Reset() {
         return;
       }
       try {
-        const response = await axios.post(`http://localhost:5000/${token}`, {password: password});
+        const response = await axios.post(`https://urlshortener-backend-7eex.onrender.com/${token}`, {password: password});
         console.log(response);
         if (response.status === 200) {alert('Password reset successfully!');navigate('/login');
         } else {

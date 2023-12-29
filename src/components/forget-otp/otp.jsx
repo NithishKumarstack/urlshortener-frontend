@@ -7,7 +7,7 @@ function Otp() {
     const [email, setEmail] = useState();
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:5000/resetpassword', { email: email })
+        axios.post('https://urlshortener-backend-7eex.onrender.com/resetpassword', { email: email })
             .then(result => {console.log(result); navigate('/reset');})
             .catch(error => {console.log(error);navigate('/signin');});
     };

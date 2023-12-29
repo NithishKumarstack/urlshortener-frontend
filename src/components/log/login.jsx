@@ -15,7 +15,7 @@ const Login = () => {
         const handleSubmit = async (e) => {
             e.preventDefault();
             try {
-                const url = "http://localhost:5000/login/users";
+                const url = "https://urlshortener-backend-7eex.onrender.com/login/users";
                 const { data: res } = await axios.post(url, data);
                 console.log(data);
                 localStorage.setItem("token", res.data);

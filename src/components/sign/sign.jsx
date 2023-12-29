@@ -23,7 +23,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "http://localhost:5000/api/users";
+      const url = "https://urlshortener-backend-7eex.onrender.com/api/users";
       const { data: res } = await axios.post(url, data);
       setMsg(res.message);
       toast.success("Check your email for verification.");

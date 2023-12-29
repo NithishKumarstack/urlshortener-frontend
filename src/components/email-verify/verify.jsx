@@ -9,7 +9,7 @@ const EmailVerify = () => {
 
     const verifyEmailUrl = async () => {
         try {
-            const url = `http://localhost:5000/api/users/${id}/verify/${token}`;
+            const url = `https://urlshortener-backend-7eex.onrender.com/api/users/${id}/verify/${token}`;
             const { data } = await axios.get(url);
             console.log(data);
             setValidUrl(true);
