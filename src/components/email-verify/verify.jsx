@@ -9,7 +9,7 @@ const EmailVerify = () => {
 
     const verifyEmailUrl = async () => {
         try {
-            const url = `https://u-r-l-shortener.netlify.app/api/users/${id}/verify/${token}`;
+            const url = `https://urlshortener-backend-7eex.onrender.com/api/users/${id}/verify/${token}`;
             const { data } = await axios.get(url);
             console.log(data);
             setValidUrl(true);
