@@ -14,7 +14,7 @@ const EmailVerify = () => {
             console.log(data);
             setValidUrl(true);
         } catch (error) {
-            // console.log(error);
+            console.log(error);
             setValidUrl(false);
         }
     };

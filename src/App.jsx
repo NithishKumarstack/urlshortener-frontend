@@ -18,7 +18,7 @@ function App() {
   <Route path="/" exact element={<Main />} />
 )}
      <Route path="/signin" element={<Signup/>}></Route>
-     <Route path="api/users/:id/verify/:token" element={<EmailVerify />} />
+     <Route path="/api/users/:id/verify/:token" element={<EmailVerify />} />
      <Route path="/" element={<Navigate replace to="/login" />} />
      <Route path="/login" element={<Login/>}></Route>
      <Route path="/otp" element={<Otp/>}></Route>
