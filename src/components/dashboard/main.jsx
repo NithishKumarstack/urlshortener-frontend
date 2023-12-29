@@ -18,7 +18,7 @@ function Main() {
 
   const fetchUrlList = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/url/list');
+      const response = await axios.get('https://urlshortener-backend-7eex.onrender.com/url/list');
       setUrlList(response.data.data);
     } catch (error) {
       console.error('Error fetching URL list:', error.message);
@@ -29,7 +29,7 @@ function Main() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/url/shorturl', {
+      const response = await axios.post('https://urlshortener-backend-7eex.onrender.com/url/shorturl', {
         originalUrl: data.url,
       });
       fetchUrlList();
@@ -53,7 +53,7 @@ function Main() {
   };
 
   const handleCopyToClipboard = () => {
-    navigator.clipboard.writeText(`localhost:5000/${data.shortenedUrl}`)
+    navigator.clipboard.writeText(`https://urlshortener-backend-7eex.onrender.com/${data.shortenedUrl}`)
       .then(() => {
         toast.success('Copied to clipboard!');
       })
