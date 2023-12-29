@@ -1,0 +1,69 @@
+import './login.css';
+import React from 'react';
+import { useState } from "react";
+import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
+const Login = () => {
+        const [data, setData] = useState({ email: "", password: "" });
+        const [error, setError] = useState("");
+        const navigate = useNavigate();
+    
+        const handleChange = ({ currentTarget: input }) => {
+            setData({ ...data, [input.name]: input.value });
+        };
+    
+        const handleSubmit = async (e) => {
+            e.preventDefault();
+            try {
+                const url = "http://localhost:5000/login/users";
+                const { data: res } = await axios.post(url, data);
+                console.log(data);
+                localStorage.setItem("token", res.data);
+                navigate('/');
+            } catch (error) {
+                if (
+                    error.response &&
+                    error.response.status >= 400 &&
+                    error.response.status <= 500
+                ) {
+                    setError(error.response.data.message);
+                }
+            }
+        };
+    return(
+       <div id='yeah' className='d-flex justify-content-center align-items-center bg-white p-3 rounded mt-30%'>
+            <form onSubmit={handleSubmit}>
+            <div className='d-flex justify-content-around align-items-center'>
+            <h1 className='d-flex '>Login Your Account</h1>
+            <input
+                    type="email"
+                    className="input"
+                    placeholder="Email"
+                    name="email"
+                    onChange={handleChange}
+                    value={data.email}
+                    required
+                />
+            <input
+                    className="input"
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    onChange={handleChange}
+                    value={data.password}
+                    required
+                />
+             {error && <div className="error_msg">{error}</div>}
+            <button className="p-1" type="submit">Login</button>
+            </div>
+            <hr></hr>
+            <div className='d-flex justify-content-center align-items-center'>
+            <Link to='/signin'><button className='btn btn-primary  me-5'>SignIN</button></Link>
+            <Link to='/otp'><button className='btn btn-primary ms-5'>ForgetPassword</button></Link>
+            </div>
+            </form>
+       </div>
+    )
+};
+
+export default Login;
