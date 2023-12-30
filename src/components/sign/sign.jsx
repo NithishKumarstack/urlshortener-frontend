@@ -12,14 +12,11 @@ const Signup = () => {
     email: "",
     password: "",
   });
-
   const [error, setError] = useState("");
   const [msg, setMsg] = useState("");
-
   const handleChange = ({ currentTarget: input }) => {
     setData({ ...data, [input.name]: input.value });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -37,7 +34,6 @@ const Signup = () => {
       }
     }
   };
-
   return (
     <div id="no" className=" d-flex justify-content-center align-items-center bg-white p-3 rounded mt-30%">
       <form onSubmit={handleSubmit}>
@@ -50,8 +46,7 @@ const Signup = () => {
           name="firstName"
           onChange={handleChange}
           value={data.firstName}
-          required
-        />
+          required/>
         <input
           className="input mb-3 me-2"
           type="text"
@@ -59,8 +54,7 @@ const Signup = () => {
           name="lastName"
           onChange={handleChange}
           value={data.lastName}
-          required
-        />
+          required/>
         <input
           type="email"
           className="input mb-3 me-2"
@@ -68,8 +62,7 @@ const Signup = () => {
           name="email"
           onChange={handleChange}
           value={data.email}
-          required
-        />
+          required/>
         <input
           className="input mb-3 me-2"
           type="password"
@@ -77,8 +70,7 @@ const Signup = () => {
           name="password"
           onChange={handleChange}
           value={data.password}
-          required
-        />
+          required/>
         {error && <div className="error_msg">{error}</div>}
         {msg && <div className="success_msg">{msg}</div>}
         <button className="me-2 ms-2 p-1" type="submit">Sign Up</button>
