@@ -1,4 +1,4 @@
-#main {
+body {
     --s: 25vmin;
     --p: calc(var(--s) / 2);
     --c1: pink;
@@ -79,15 +79,15 @@
   }
   
   @media (prefers-reduced-motion) {
-    main {
+    body {
       animation: none;
     }
   }
 
-  form{
-    background: transparent;
-    width: 95vw;
-    backdrop-filter: blur(3px);
-        box-shadow: -3px -3px 9px #aaa9a9a2,
-    3px 3px 7px rgba(147, 149, 151, 0.671);
-    }
+form{
+  background: transparent;
+  width: 95vw;
+  backdrop-filter: blur(3px);
+  box-shadow: -3px -3px 9px #aaa9a9a2,
+  3px 3px 7px rgba(147, 149, 151, 0.671);
+}
