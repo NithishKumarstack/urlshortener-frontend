@@ -17,10 +17,10 @@ const Login = () => {
             try {
                 const url = "https://urlshortener-backend-7eex.onrender.com/login/users";
                 const { data: res } = await axios.post(url, data);
-                console.log(data);
                 localStorage.setItem("token", res.data);
                 navigate('/');
             } catch (error) {
+                console.log(error);
                 if (
                     error.response &&
                     error.response.status >= 400 &&
