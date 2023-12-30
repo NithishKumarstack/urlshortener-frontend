@@ -27,7 +27,7 @@ function Reset() {
     };
   return (
     <div id='yeah' className='d-flex justify-content-center align-items-center bg-white p-3 rounded mt-30%'>
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='d-flex flex-column'>
     <h1 className='d-flex'>Reset A PassWord</h1>
     <input
             type="text"

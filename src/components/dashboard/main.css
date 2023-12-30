@@ -1,4 +1,4 @@
-body {
+#main {
     --s: 25vmin;
     --p: calc(var(--s) / 2);
     --c1: pink;
@@ -79,7 +79,7 @@ body {
   }
   
   @media (prefers-reduced-motion) {
-    body {
+    main {
       animation: none;
     }
   }

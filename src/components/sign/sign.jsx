@@ -41,7 +41,7 @@ const Signup = () => {
   return (
     <div id="no" className=" d-flex justify-content-center align-items-center bg-white p-3 rounded mt-30%">
       <form onSubmit={handleSubmit}>
-      <div className='d-flex justify-content-around align-items-center'>
+      <div className='d-flex flex-column justify-content-around align-items-center'>
       <h1>Create Account</h1>
         <input
           className="input mb-3 me-2"

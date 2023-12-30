@@ -22,7 +22,7 @@ const EmailVerify = () => {
 
     return (
         <div id='yes' className="d-flex justify-content-center align-items-center bg-white p-3 rounded mt-30%">
-            <div id='this' className="p-3">
+            <div id='this' className="p-3 flex-column">
                 <div className="d-flex justify-content-around">
                     <h1>{validUrl ? "Email verified successfully" : "Invalid link"}</h1>
                     <h1>Now Login</h1>

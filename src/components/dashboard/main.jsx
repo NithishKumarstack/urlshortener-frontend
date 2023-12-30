@@ -63,7 +63,7 @@ function Main() {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center">
+    <div id='main' className="d-flex justify-content-center align-items-center">
       <div className="bg-white p-3 mt-5 rounded">
         <form onSubmit={handleSubmit}>
           <h1>Url Shortener</h1>
@@ -87,7 +87,7 @@ function Main() {
               <input
                 className="input mb-2"
                 type="text"
-                value={`localhost:5000/${data.shortenedUrl}`}
+                value={`https://urlshortener-backend-7eex.onrender.com/${data.shortenedUrl}`}
                 readOnly
               />
               <button className="ms-2 p-1" onClick={handleCopyToClipboard}>

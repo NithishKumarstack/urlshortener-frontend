@@ -33,11 +33,11 @@ const Login = () => {
     return(
        <div id='yeah' className='d-flex justify-content-center align-items-center bg-white p-3 rounded mt-30%'>
             <form onSubmit={handleSubmit}>
-            <div className='d-flex justify-content-around align-items-center'>
+            <div className='d-flex flex-column justify-content-around align-items-center'>
             <h1 className='d-flex '>Login Your Account</h1>
             <input
                     type="email"
-                    className="input"
+                    className="input mb-2"
                     placeholder="Email"
                     name="email"
                     onChange={handleChange}
@@ -45,7 +45,7 @@ const Login = () => {
                     required
                 />
             <input
-                    className="input"
+                    className="input mb-2"
                     type="password"
                     placeholder="Password"
                     name="password"
@@ -57,9 +57,9 @@ const Login = () => {
             <button className="p-1" type="submit">Login</button>
             </div>
             <hr></hr>
-            <div className='d-flex justify-content-center align-items-center'>
-            <Link to='/signin'><button className='btn btn-primary  me-5'>SignIN</button></Link>
-            <Link to='/otp'><button className='btn btn-primary ms-5'>ForgetPassword</button></Link>
+            <div className='d-flex justify-content-around align-items-center'>
+            <Link to='/signin'><button className='btn btn-primary'>SignIN</button></Link>
+            <Link to='/otp'><button className='btn btn-primary'>ForgetPassword</button></Link>
             </div>
             </form>
        </div>
